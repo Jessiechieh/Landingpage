@@ -21,14 +21,44 @@
         <!-- favicon.ico. Place these in the root directory. -->
         <link rel="shortcut icon" href="favicon.ico">
 
+        <style>
+            .hero {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero .hero-media,
+            .hero::before {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                pointer-events: none;
+            }
+
+            .hero .hero-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero .hero-media img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.35;
+            }
+        </style>
+
     </head>
 
     <body class="has-animations">
 
 
     <!-- Header -->
-    <header class="pt2 pb1 align--center">
-        <div class="container">
+    <header class="pt2 pb1 align--center hero">
+        <div class="hero-media">
+            <img src="img/cabin.jpg" alt="深夜咖啡廳柔光氛圍">
+        </div>
+        <div class="container hero-content">
             <p class="small">深夜故事咖啡廳</p>
             <h1>今晚，讓你的故事有個地方落腳。</h1>
             <p>一杯咖啡、一些安靜、和一個願意聽你說話的人。</p>
@@ -53,7 +83,7 @@
                 <!-- Atmosphere -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-1 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/cabin.jpg" alt="夜晚咖啡廳氛圍">
+                        <img class="info-image relative z2" src="img/cabin.jpg" alt="夜晚咖啡廳氛圍">
                         <div class="pattern pattern--left-down absolute z1"></div>
                     </div>
                 </div>
@@ -68,14 +98,14 @@
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-3 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/teepee.jpg" alt="溫柔傾聽">
+                        <img class="info-image relative z2" src="img/teepee.jpg" alt="溫柔傾聽">
                         <div class="pattern pattern--right-middle absolute z1"></div>
                     </div>
                 </div>
                 <!-- Small group -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-5 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/fishing.jpg" alt="小型名額">
+                        <img class="info-image relative z2" src="img/fishing.jpg" alt="小型名額">
                         <div class="pattern pattern--left-up absolute z1"></div>
                     </div>
                 </div>
@@ -90,14 +120,14 @@
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-7 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/archery.jpg" alt="深夜氣氛">
+                        <img class="info-image relative z2" src="img/archery.jpg" alt="深夜氣氛">
                         <div class="pattern pattern--right-down absolute z1"></div>
                     </div>
                 </div>
                 <!-- Steps -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-9 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/canoeing.jpg" alt="預約流程">
+                        <img class="info-image relative z2" src="img/canoeing.jpg" alt="預約流程">
                         <div class="pattern pattern--left-middle absolute z1"></div>
                     </div>
                 </div>
