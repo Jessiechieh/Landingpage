@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="zh-Hant">
 
     <head>
 
@@ -8,17 +8,61 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <title>Chippewa</title>
-        <meta name="description" content="">
+        <title>深夜故事咖啡廳｜溫柔傾聽的夜晚座位</title>
+        <meta name="description" content="像深夜食堂一樣的療癒咖啡廳：來喝杯咖啡、聊聊你的人生故事，在安全不評判的空間裡，被好好聽見。">
 
         <!-- The compiled CSS file -->
         <link rel="stylesheet" href="css/production.css">
 
         <!-- Web fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 
         <!-- favicon.ico. Place these in the root directory. -->
         <link rel="shortcut icon" href="favicon.ico">
+
+        <style>
+            .hero {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero .hero-media,
+            .hero::before {
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                pointer-events: none;
+            }
+
+            .hero .hero-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero .hero-media img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.35;
+            }
+
+            .info-image {
+                width: 100%;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+                display: block;
+            }
+
+            .testimonial-avatar {
+                width: 64px;
+                height: 64px;
+                border-radius: 999px;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto 0.8rem;
+            }
+        </style>
 
     </head>
 
@@ -26,10 +70,22 @@
 
 
     <!-- Header -->
-    <header class="pt2 pb1 align--center">
-        <div class="container">
-            <p>Welcome to</p>
-            <h1 title="Camp Chippewa"><img class="logo" src="/img/logo.svg" alt="Camp Chippewa"></h1>
+    <header class="pt2 pb1 align--center hero">
+        <div class="hero-media">
+            <img src="img/hero.jpeg" alt="深夜咖啡廳柔光氛圍">
+        </div>
+        <div class="container hero-content">
+            <p class="small">深夜故事咖啡廳</p>
+            <h1>今晚，讓你的故事有個地方落腳。</h1>
+            <p>一杯咖啡、一些安靜、和一個願意聽你說話的人。</p>
+            <div class="mt1">
+                <a class="btn btn--default mr1" href="#reserve">立即預約今晚的座位</a>
+                <a class="btn btn--outline" href="#waitlist">加入候補名單</a>
+            </div>
+            <div class="mt1">
+                <a class="btn btn--outline btn--sm" href="#line">加入 LINE｜收到每週主題與活動通知</a>
+            </div>
+            <p class="mt1 small">開放時間：週三～週日 19:00–01:00（最後入場 23:30）</p>
         </div>
     </header>
 
@@ -40,97 +96,222 @@
 
             <!-- Info -->
             <section class="grid-row grid-row--center">
-                <!-- Cabin -->
+                <!-- Atmosphere -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-1 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/cabin.jpg" alt="Cabin">
+                        <img class="info-image relative z2" src="img/feature-0.jpeg" alt="夜晚咖啡廳氛圍">
                         <div class="pattern pattern--left-down absolute z1"></div>
                     </div>
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-2">
-                    <h3>Cabin</h3>
-                    <p>Illa argumenta propria videamus, cur omnia sint paria peccata. Quamquam te quidem video minime esse deterritum. Beatus sibi videtur esse moriens. In qua quid est boni praeter summam&nbsp;voluptatem.</p>
+                    <h3>像深夜食堂一樣的療癒咖啡廳</h3>
+                    <p>來喝杯咖啡、聊聊你的人生故事，在安全不評判的空間裡，被好好聽見。這裡不是諮商，只是陪伴式聊天。</p>
                 </div>
-                <!-- Teepees -->
+                <!-- Listening -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-4">
-                    <h3>Teepees</h3>
-                    <p>A quibus propter discendi cupiditatem videmus ultimas terras esse peragratas. Laelius clamores sofòw ille so lebat Edere compellans gumias ex ordine&nbsp;nostros.</p>
+                    <h3>不評判的傾聽</h3>
+                    <p>沒有對錯、沒有說教。你可以慢慢說，也可以只說一點點。</p>
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-3 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/teepee.jpg" alt="Teepee">
+                        <img class="info-image relative z2" src="img/feature-1.jpeg" alt="溫柔傾聽">
                         <div class="pattern pattern--right-middle absolute z1"></div>
                     </div>
                 </div>
-                <!-- Fishing -->
+                <!-- Small group -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-5 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/fishing.jpg" alt="Fishing">
+                        <img class="info-image relative z2" src="img/feature-2.jpeg" alt="小型名額">
                         <div class="pattern pattern--left-up absolute z1"></div>
                     </div>
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-6">
-                    <h3>Fishing</h3>
-                    <p>Que Manilium, ab iisque M. Intellegi quidem, ut propter aliam quampiam rem, verbi gratia propter voluptatem, nos amemus; An eum locum libenter invisit&nbsp;ultimas.</p>
+                    <h3>小型名額與安全感</h3>
+                    <p>每晚名額有限，讓空間保持安靜、舒服，也讓每個人都能被照顧。</p>
                 </div>
-                <!-- Archery -->
+                <!-- Night mood -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-8">
-                    <h3>Archery</h3>
-                    <p>At ille pellit, qui permulcet sensum voluptate. Quid in isto egregio tuo officio et tanta fide-sic enim existimo-ad corpus refers? Nec vero sum nescius esse utilitatem in&nbsp;historia.</p>
+                    <h3>深夜療癒氛圍</h3>
+                    <p>柔光、安靜音樂、咖啡與甜點，讓你在夜晚慢慢降落。</p>
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-7 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/archery.jpg" alt="Archery">
+                        <img class="info-image relative z2" src="img/feature-3.jpeg" alt="深夜氣氛">
                         <div class="pattern pattern--right-down absolute z1"></div>
                     </div>
                 </div>
-                <!-- Canoeing -->
+                <!-- Steps -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-9 reveal-on-scroll is-revealing">
                     <div class="relative">
-                        <img class="info-image relative z2" src="/img/canoeing.jpg" alt="Canoeing">
+                        <img class="info-image relative z2" src="img/feature-4.jpeg" alt="預約流程">
                         <div class="pattern pattern--left-middle absolute z1"></div>
                     </div>
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-10">
-                    <h3>Canoeing</h3>
-                    <p>Nam si propter voluptatem, quae est ista laus, quae possit e macello peti? Sin te auctoritas commovebat, nobisne omnibus et Platoni ipsi nescio quem illum&nbsp;anteponebas.</p>
+                    <h3>如何進行</h3>
+                    <p>Step 1 預約今晚的座位或加入候補。</p>
+                    <p>Step 2 來到店裡，選一個舒服的位置。</p>
+                    <p>Step 3 你想說就說，想安靜也可以。</p>
                 </div>
             </section>
 
         </div>
 
-        <!-- Pricing -->
+        <!-- Audience -->
         <section class="align--center pt2 pb3">
-            <p class="h2">Rent the whole place for $3,670/night.</p>
-            <p>Maximum of 40 people.</p>
+            <div class="container">
+                <h2>適合誰來</h2>
+                <ul class="list--indented align--left">
+                    <li>下班後覺得孤單、壓力大、想找地方喘口氣的人</li>
+                    <li>想被聽見、但不想被教訓或被建議的人</li>
+                    <li>對心理諮商有距離，但想先從「有人陪你聊」開始的人</li>
+                    <li>喜歡安靜溫暖的咖啡館、夜晚氛圍、慢節奏的人</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="reserve" class="align--center pt2 pb3">
+            <div class="container">
+                <h2>方案與價格</h2>
+                <div class="grid-row mt2">
+                    <div class="grid-column span-one-third mt1">
+                        <div class="border--full p2">
+                            <h3>一杯咖啡 + 60 分鐘故事座位</h3>
+                            <p class="h2">NT$380</p>
+                            <p>適合第一次來，輕輕坐下，慢慢說。</p>
+                            <a class="btn btn--default mt1" href="#contact">預約這個方案</a>
+                        </div>
+                    </div>
+                    <div class="grid-column span-one-third mt1">
+                        <div class="border--full p2">
+                            <h3>深夜食堂故事桌（4–6 人）</h3>
+                            <p class="h2">NT$680</p>
+                            <p>每週五/六，小團體分享，彼此陪伴。</p>
+                            <a class="btn btn--default mt1" href="#contact">預約故事桌</a>
+                        </div>
+                    </div>
+                    <div class="grid-column span-one-third mt1">
+                        <div class="border--full p2">
+                            <h3>安靜角落：只想坐著也可以</h3>
+                            <p class="h2">NT$420</p>
+                            <p>不必聊天，只要被溫柔包圍。</p>
+                            <a class="btn btn--default mt1" href="#contact">預約安靜座位</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="waitlist" class="mt2">
+                    <p class="h3">今晚客滿也沒關係</p>
+                    <p>加入候補名單，空位一釋出就通知你。</p>
+                    <a class="btn btn--outline" href="#contact">加入候補名單</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="align--center pt2 pb3">
+            <div class="container">
+                <h2>真實感與信任</h2>
+                <div class="grid-row mt2">
+                    <div class="grid-column span-one-third mt1">
+                        <div class="border--full p2">
+                            <img class="testimonial-avatar" src="img/testimonial-1.jpeg" alt="評論者 L">
+                            <p>「我其實沒說太多，但那晚被好好聽著，就覺得不孤單了。」</p>
+                            <p class="small">— 上班族・L</p>
+                        </div>
+                    </div>
+                    <div class="grid-column span-one-third mt1">
+                        <div class="border--full p2">
+                            <img class="testimonial-avatar" src="img/testimonial-2.jpeg" alt="評論者 Y">
+                            <p>「不像諮商的壓力，更像有人陪你坐著的溫柔感。」</p>
+                            <p class="small">— 研究生・Y</p>
+                        </div>
+                    </div>
+                    <div class="grid-column span-one-third mt1">
+                        <div class="border--full p2">
+                            <img class="testimonial-avatar" src="img/testimonial-3.jpeg" alt="評論者 C">
+                            <p>「那盞燈真的很暖，像把一天的疲憊慢慢放下。」</p>
+                            <p class="small">— 自由接案・C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules -->
+        <section class="align--center pt2 pb3">
+            <div class="container">
+                <h2>我們的規範</h2>
+                <ul class="list--indented align--left">
+                    <li>保密、尊重：你說的話留在這裡。</li>
+                    <li>不錄音、不錄影，保護每個人的界線。</li>
+                    <li>不對他人的故事做評價或指導。</li>
+                    <li>每個人都有自己的界線與節奏。</li>
+                </ul>
+                <p class="small">提醒：本服務為陪伴與傾聽的咖啡廳體驗，非醫療或心理治療。</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="align--center pt2 pb3">
+            <div class="container">
+                <h2>FAQ</h2>
+                <dl class="align--left">
+                    <dt class="bold">這是諮商嗎？</dt>
+                    <dd>不是。我們提供的是陪伴與傾聽的咖啡廳體驗，不做診斷或治療。</dd>
+                    <dt class="bold mt1">我不擅長聊天也可以去嗎？</dt>
+                    <dd>可以的。你可以慢慢說，也可以只是安靜坐著。</dd>
+                    <dt class="bold mt1">可以一個人去嗎？</dt>
+                    <dd>當然可以。很多人都是一個人來，這裡很安全。</dd>
+                    <dt class="bold mt1">會不會被推銷課程？</dt>
+                    <dd>不會。我們不推銷課程或產品。</dd>
+                    <dt class="bold mt1">可以只坐著不說話嗎？</dt>
+                    <dd>可以，安靜也是一種好好的休息。</dd>
+                    <dt class="bold mt1">臨時取消怎麼辦？</dt>
+                    <dd>請提前 3 小時告知，我們會把位置留給候補的人。</dd>
+                </dl>
+            </div>
         </section>
 
         <!-- Contact -->
-        <section class="bg--secondary-color pt3 pb3">
+        <section id="contact" class="bg--secondary-color pt3 pb3">
             <div class="container">
                 <div class="mb2 align--center">
-                    <h3 class="mb1">Contact us to get started</h3>
-                    <p>We'll reply when we get back from&nbsp;fishing.</p>
+                    <h3 class="mb1">預約與候補表單</h3>
+                    <p>你想說多少都可以，我們會回覆確認。</p>
                 </div>
                 <form>
                     <div class="grid-row">
                         <div class="grid-column span-half mt1">
-                            <label class="label" for="name">Name</label>
-                            <input class="form-control" id="name">
+                            <label class="label" for="name">姓名 / 暱稱</label>
+                            <input class="form-control" id="name" name="name" placeholder="留下你想被稱呼的名字">
                         </div>
                         <div class="grid-column span-half mt1">
-                            <label class="label" for="email">Email</label>
-                            <input class="form-control" id="email" type="email">
+                            <label class="label" for="contact">聯絡方式</label>
+                            <input class="form-control" id="contact" name="contact" placeholder="Email 或電話">
                         </div>
                     </div>
-                    <label class="label mt1" for="dates">Timeline</label>
-                    <input class="form-control" id="dates">
-                    <label class="label mt1" for="message">Message</label>
-                    <textarea class="form-control" id="message"></textarea>
+                    <label class="label mt1" for="time">想預約日期時間</label>
+                    <input class="form-control" id="time" name="time" placeholder="例如：週五 21:30">
+                    <label class="label mt1" for="message">備註</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="想說的話、偏好的座位或需求"></textarea>
                     <div class="align--right mt1">
-                        <button class="btn btn--outline">Send</button>
+                        <button class="btn btn--outline">送出預約</button>
                     </div>
                 </form>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section id="line" class="align--center pt2 pb3">
+            <div class="container">
+                <p class="h2">如果你願意，今晚留一個位子給自己。</p>
+                <p>你不需要準備好才來。今晚也沒關係。</p>
+                <div class="mt1">
+                    <a class="btn btn--default mr1" href="#reserve">立即預約今晚的座位</a>
+                    <a class="btn btn--outline mr1" href="#waitlist">加入候補名單</a>
+                    <a class="btn btn--outline" href="https://line.me" target="_blank" rel="noreferrer">加入 LINE｜收到每週主題與活動通知</a>
+                </div>
             </div>
         </section>
         
@@ -139,14 +320,14 @@
     <!-- Footer -->
     <footer class="pt2 pb2">
         <div class="container align--center">
-            <p>W5723 Lake View Chester, CA 96020</p>
-            <p>Design by <a href="https://www.papayatemplates.com" class="link">Papaya.</a></p>
+            <p>台北深夜故事咖啡廳｜安靜、溫柔、陪伴式的夜晚座位</p>
+            <p class="small">提醒：本服務為陪伴與傾聽的咖啡廳體驗，非醫療或心理治療。</p>
             <ul class="no-bullets list--inline mt1">
-                <li class="mr1"><a href="https://www.facebook.com" class="link"><img class="icon" src="/img/facebook.svg" alt="Facebook"></a></li>
-                <li class="mr1"><a href="https://www.twitter.com" class="link"><img class="icon" src="/img/twitter.svg" alt="Twitter"></a></li>
-                <li><a href="https://www.instagram.com" class="link"><img class="icon" src="/img/instagram.svg" alt="Instagram"></a></li>
+                <li class="mr1"><a href="https://www.facebook.com" class="link">Facebook</a></li>
+                <li class="mr1"><a href="https://www.twitter.com" class="link">Twitter</a></li>
+                <li><a href="https://www.instagram.com" class="link">Instagram</a></li>
             </ul>
-            <p>&copy; Camp Chippewa</p>
+            <p>&copy; 深夜故事咖啡廳</p>
         </div>
     </footer>
 
@@ -158,4 +339,3 @@
 
     </body>
 </html>
-
